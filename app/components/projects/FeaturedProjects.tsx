@@ -1,38 +1,6 @@
+import { projects } from "@/app/data/projects";
 import Link from "next/link";
 
-const projects = [
-  {
-    title: "Parent AI Agent",
-    badge: "LEGENDARY",
-    icon: "👨‍👩‍👧",
-    description:
-      "AI-powered parenting assistant for vaccine tracking, reminders, inventory and child insights.",
-    tech: ["React Native", "Supabase", "GraphQL", "OpenAI"],
-    slug: "parent-ai-agent",
-  },
-  {
-    title: "Interview Copilot",
-    badge: "EPIC",
-    icon: "🎯",
-    description:
-      "AI interview assistant that helps you prepare, practice and ace your next interview.",
-    tech: ["Next.js", "TypeScript", "OpenAI", "Tailwind"],
-    slug: "interview-copilot",
-  },
-  {
-    title: "Humanizer AI",
-    badge: "RARE",
-    icon: "✍️",
-    description:
-      "Transforms AI-generated content into natural, human-like writing with different tones.",
-    tech: [
-      "Next.js",
-      "OpenAI",
-      "Prompt Engineering",
-    ],
-    slug: "humanizer-ai",
-  },
-];
 
 export default function FeaturedProjects() {
   return (
@@ -43,13 +11,26 @@ export default function FeaturedProjects() {
           border
           border-[var(--border)]
           bg-[var(--card)]
-          p-8
+          p-6
+          sm:p-8
           shadow-sm
         "
       >
         {/* Header */}
 
-        <div className="mb-8 flex items-center justify-between">
+        <div
+          className="
+            mb-8
+
+            flex
+            flex-col
+            gap-4
+
+            sm:flex-row
+            sm:items-center
+            sm:justify-between
+          "
+        >
           <div>
             <p
               className="
@@ -89,7 +70,7 @@ export default function FeaturedProjects() {
             className="
               font-medium
               text-[var(--accent)]
-              transition-colors
+              transition-opacity
               hover:opacity-80
             "
           >
@@ -97,51 +78,72 @@ export default function FeaturedProjects() {
           </Link>
         </div>
 
-        {/* Project Cards */}
+        {/* Cards */}
 
-        <div className="grid gap-6 lg:grid-cols-3">
-          {projects.map((project) => (
+        <div
+          className="
+            grid
+            gap-6
+
+            md:grid-cols-2
+            xl:grid-cols-3
+          "
+        >
+          {projects.slice(0, 3).map((project) => (
             <Link
               key={project.slug}
               href={`/projects/${project.slug}`}
+              className="group"
             >
               <article
                 className="
+                  flex
                   h-full
+                  flex-col
+
                   rounded-2xl
+
                   border
                   border-[var(--border)]
+
                   bg-[var(--card-secondary)]
+
                   p-6
 
                   transition-all
                   duration-300
 
                   hover:-translate-y-1
+                  hover:border-[var(--accent)]
                   hover:shadow-lg
                 "
               >
                 {/* Top */}
 
                 <div className="flex items-center justify-between">
-                  <div className="text-4xl">
+                  <div className="text-5xl">
                     {project.icon}
                   </div>
 
                   <span
                     className="
                       rounded-full
+
                       border
                       border-[var(--border)]
+
                       bg-[var(--card)]
+
                       px-3
                       py-1
+
                       text-xs
                       font-medium
+
                       text-[var(--accent)]
                     "
                   >
-                    {project.badge}
+                    {project.icon}
                   </span>
                 </div>
 
@@ -150,8 +152,11 @@ export default function FeaturedProjects() {
                 <h3
                   className="
                     mt-5
-                    text-xl
+
+                    text-2xl
+
                     font-bold
+
                     text-[var(--text)]
                   "
                 >
@@ -163,8 +168,11 @@ export default function FeaturedProjects() {
                 <p
                   className="
                     mt-3
-                    text-sm
-                    leading-relaxed
+
+                    flex-1
+
+                    leading-7
+
                     text-[var(--text-muted)]
                   "
                 >
@@ -173,17 +181,29 @@ export default function FeaturedProjects() {
 
                 {/* Tech */}
 
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
+                <div
+                  className="
+                    mt-5
+
+                    flex
+                    flex-wrap
+                    gap-2
+                  "
+                >
+                  {project.stack.map((tech: string) => (
                     <span
                       key={tech}
                       className="
                         rounded-md
+
                         border
                         border-[var(--border)]
+
                         px-2
                         py-1
+
                         text-xs
+
                         text-[var(--text-muted)]
                       "
                     >
@@ -197,8 +217,14 @@ export default function FeaturedProjects() {
                 <div
                   className="
                     mt-6
+
                     font-medium
+
                     text-[var(--accent)]
+
+                    transition-transform
+
+                    group-hover:translate-x-1
                   "
                 >
                   Open Quest →

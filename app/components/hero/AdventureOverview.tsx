@@ -9,7 +9,7 @@ import {
 const stats = [
   {
     icon: Star,
-    value: "8+",
+    value: "7+",
     label: "Years Experience",
     color: "text-yellow-500",
   },
@@ -21,7 +21,7 @@ const stats = [
   },
   {
     icon: Code2,
-    value: "40+",
+    value: "12+",
     label: "Technologies",
     color: "text-green-500",
   },

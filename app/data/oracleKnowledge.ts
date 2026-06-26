@@ -81,7 +81,7 @@ Learning:
   hire: `
 🏆 Why Hire Simran?
 
-• 8+ years experience
+• 7+ years experience
 • Senior Frontend Engineer
 • React & TypeScript expert
 • Enterprise experience at Intuit
@@ -126,7 +126,7 @@ Level: Expert
 javascript: `
 🟨 JavaScript Expertise
 
-Experience: 8+ Years
+Experience: 7+ Years
 
 Highlights:
 • Closures
