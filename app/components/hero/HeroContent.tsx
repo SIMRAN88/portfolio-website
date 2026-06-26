@@ -1,6 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export default function HeroContent() {
   const { resolvedTheme } = useTheme();
@@ -101,71 +102,72 @@ export default function HeroContent() {
 
       {/* Buttons */}
 
-      <div
-        className="
-          mt-8
+<div
+  className="
+    mt-8
+    flex
+    flex-col
+    gap-3
+    sm:flex-row
+    sm:justify-center
+    lg:justify-start
+  "
+>
+  <Link
+    href="#projects"
+    className="
+      w-full
+      sm:w-auto
 
-          flex
-          flex-col
-          gap-3
+      rounded-xl
+      bg-[var(--accent)]
 
-          sm:flex-row
-          sm:justify-center
+      px-5
+      py-3
 
-          lg:justify-start
-        "
-      >
-        <button
-          className="
-            w-full
-            sm:w-auto
+      text-center
+      text-sm
+      font-semibold
+      text-white
 
-            rounded-xl
-            bg-[var(--accent)]
+      shadow-lg
+      transition-all
 
-            px-5
-            py-3
+      hover:scale-[1.02]
+      hover:opacity-90
+    "
+  >
+    ⚔ Explore Projects
+  </Link>
 
-            text-sm
-            font-semibold
-            text-white
+  <Link
+    href="#contact"
+    className="
+      w-full
+      sm:w-auto
 
-            shadow-lg
-            transition-all
+      rounded-xl
+      border
+      border-[var(--border)]
 
-            hover:scale-[1.02]
-            hover:opacity-90
-          "
-        >
-          ▶ View Quests
-        </button>
+      bg-[var(--card)]
 
-        <button
-          className="
-            w-full
-            sm:w-auto
+      px-5
+      py-3
 
-            rounded-xl
-            border
-            border-[var(--border)]
+      text-center
+      text-sm
+      font-semibold
+      text-[var(--text)]
 
-            bg-[var(--card)]
+      transition-all
 
-            px-5
-            py-3
-
-            text-sm
-            font-semibold
-            text-[var(--text)]
-
-            transition-all
-
-            hover:bg-[var(--card-secondary)]
-          "
-        >
-          💬 Talk to My AI
-        </button>
-      </div>
+      hover:bg-[var(--card-secondary)]
+    "
+  >
+    🤖 Ask the Oracle
+  </Link>
+</div>
 
       {/* Small Availability Badge */}
 

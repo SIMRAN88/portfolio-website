@@ -37,53 +37,33 @@ export default function Home() {
           lg:px-8
         "
       >
-        {/* HERO */}
+     <section id="home" className="pt-6 lg:pt-10">
+  {/* Desktop */}
 
-        <section
-          id="home"
-          className="pt-6 lg:pt-10"
-        >
-          <div
-            className="
-              grid
-              gap-6
-              lg:grid-cols-[280px_1fr]
-              items-start
-            "
-          >
-            {/* MAIN CONTENT FIRST ON MOBILE */}
+  <div className="hidden lg:grid lg:grid-cols-[280px_1fr] gap-6 items-start">
+    <div className="space-y-4">
+      <CharacterPanel />
+      <StatsPanel />
+    </div>
 
-            <div
-              className="
-                order-1
-                lg:order-2
-                space-y-6
-              "
-            >
-              <HeroSection />
+    <div className="space-y-6">
+      <HeroSection />
+      <AdventureOverview />
+    </div>
+  </div>
 
-              <AdventureOverview />
-            </div>
+  {/* Mobile / Tablet */}
 
-            {/* SIDEBAR */}
+  <div className="space-y-6 lg:hidden">
+    <HeroSection />
 
-            <div
-              className="
-                order-2
-                lg:order-1
-                space-y-4
-              "
-            >
-              <CharacterPanel />
+    <CharacterPanel />
 
-              {/* Desktop / Tablet Only */}
+    <StatsPanel />
 
-              <div className="hidden md:block">
-                <StatsPanel />
-              </div>
-            </div>
-          </div>
-        </section>
+    <AdventureOverview />
+  </div>
+</section>
 
         {/* PROJECTS */}
 

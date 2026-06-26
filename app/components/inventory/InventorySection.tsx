@@ -12,6 +12,11 @@ import {
   SiRedux,
   SiDocker,
   SiOpenai,
+  SiSupabase,
+  SiExpo,
+  SiJavascript,
+  SiGithub,
+  SiSplunk,
 } from "react-icons/si";
 
 export default function InventorySection() {
@@ -19,6 +24,10 @@ export default function InventorySection() {
     {
       name: "React",
       icon: <SiReact className="text-cyan-500" />,
+    },
+     {
+      name: "Javascript",
+      icon: <SiJavascript className="text-yellow-500" />,
     },
     {
       name: "TypeScript",
@@ -45,12 +54,32 @@ export default function InventorySection() {
       icon: <SiRedux className="text-[var(--accent)]" />,
     },
     {
-      name: "Docker",
-      icon: <SiDocker className="text-blue-500" />,
-    },
-    {
       name: "OpenAI",
       icon: <SiOpenai className="text-emerald-500" />,
+    },
+    {
+      name: "React Native",
+      icon: <SiReact className="text-sky-500" />,
+    },
+    {
+      name: "Supabase",
+      icon: <SiSupabase className="text-green-500" />,
+    },
+    {
+      name: "Expo",
+      icon: <SiExpo className="text-[var(--text)]" />,
+    },
+    {
+      name: "Github",
+      icon: <SiGithub className="text-sky-500" />,
+    },
+    {
+      name: "Amplitude",
+      icon: <SiSplunk className="text-green-500" />,
+    },
+    {
+      name: "Splunk",
+      icon: <SiSplunk className="text-orange-500" />,
     },
   ];
 
@@ -77,7 +106,7 @@ export default function InventorySection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-4 gap-3">
         {items.map((item) => (
           <InventoryItem
             key={item.name}

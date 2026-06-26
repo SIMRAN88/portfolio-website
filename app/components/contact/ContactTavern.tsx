@@ -104,7 +104,7 @@ export default function ContactTavern() {
 
       <div className="mt-6 space-y-3">
         <a
-          href="mailto:simran@email.com"
+          href="mailto:rajsimran1996@gmail.com"
           className="
             flex
             items-center
@@ -158,7 +158,7 @@ export default function ContactTavern() {
         </a>
 
         <a
-          href="https://linkedin.com/in/your-profile"
+          href="https://www.linkedin.com/in/simran-raj-37079a107/"
           target="_blank"
           rel="noreferrer"
           className="

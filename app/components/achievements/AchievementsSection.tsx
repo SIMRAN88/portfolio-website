@@ -4,11 +4,6 @@ import Link from "next/link";
 
 const achievements = [
   {
-    icon: "🏆",
-    title: "First Commit",
-    description: "Started my coding journey",
-  },
-  {
     icon: "⚛️",
     title: "React Master",
     description: "Built complex React applications",
@@ -33,7 +28,13 @@ const achievements = [
     title: "AI Explorer",
     description: "Exploring AI & ML technologies",
   },
+  {
+    icon: "🎨",
+    title: "UI Designer",
+    description: "Created beautiful user interfaces",
+  }
 ];
+
 
 export default function AchievementsSection() {
   return (

@@ -72,50 +72,31 @@ export default function SkillsTree({
       </div>
 
       {/* Tree */}
+<div className="grid grid-cols-2 gap-6">
+  <div className="flex flex-col items-center">
+    <SkillNode label="Frontend" border="border-cyan-500/40" />
+    <div className="h-4 w-[2px] bg-[var(--border)]" />
+    <SkillNode label="React" border="border-cyan-500/40" />
+    <div className="h-4 w-[2px] bg-[var(--border)]" />
+    <SkillNode label="GraphQL" border="border-pink-500/40" />
+  </div>
 
-      <div className="grid grid-cols-3 gap-6">
-        <div className="flex flex-col items-center">
-          <SkillNode
-            label="Frontend"
-            border="border-cyan-500/40"
-          />
+  <div className="flex flex-col items-center">
+    <SkillNode label="Architecture" border="border-blue-500/40" />
+    <div className="h-4 w-[2px] bg-[var(--border)]" />
+    <SkillNode label="System Design" border="border-indigo-500/40" />
+    <div className="h-4 w-[2px] bg-[var(--border)]" />
+    <SkillNode label="Performance" border="border-yellow-500/40" />
+  </div>
 
-          <div className="h-4 w-[2px] bg-[var(--border)]" />
-
-          <SkillNode
-            label="GraphQL"
-            border="border-pink-500/40"
-          />
-        </div>
-
-        <div className="flex flex-col items-center">
-          <SkillNode
-            label="Architecture"
-            border="border-blue-500/40"
-          />
-
-          <div className="h-4 w-[2px] bg-[var(--border)]" />
-
-          <SkillNode
-            label="Performance"
-            border="border-yellow-500/40"
-          />
-        </div>
-
-        <div className="flex flex-col items-center">
-          <SkillNode
-            label="Leadership"
-            border="border-purple-500/40"
-          />
-
-          <div className="h-4 w-[2px] bg-[var(--border)]" />
-
-          <SkillNode
-            label="AI Engineering"
-            border="border-green-500/40"
-          />
-        </div>
-      </div>
+  <div className="flex flex-col items-center">
+    <SkillNode label="Leadership" border="border-purple-500/40" />
+    <div className="h-4 w-[2px] bg-[var(--border)]" />
+    <SkillNode label="Mentoring" border="border-violet-500/40" />
+    <div className="h-4 w-[2px] bg-[var(--border)]" />
+    <SkillNode label="AI Engineering" border="border-green-500/40" />
+  </div>
+</div>
 
       {!hideFooter && (
         <Link
