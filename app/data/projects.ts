@@ -198,9 +198,9 @@ export const projects: Project[] = [
       "Large Scale UI",
     ],
 
-    github: "https://github.com/SIMRAN88",
+    github: "https://github.com/SIMRAN88/covid-vaccine-assist",
 
-    website: "#",
+    website: "https://coviassist.netlify.app/",
   },
 
   {
@@ -240,8 +240,8 @@ export const projects: Project[] = [
       "Component Design",
     ],
 
-    github: "https://github.com/SIMRAN88",
+    github: "https://github.com/SIMRAN88/game-connect-four",
 
-    website: "#",
+    website: "https://connect-four-row.netlify.app/",
   },
 ];
